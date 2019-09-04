@@ -1,0 +1,21 @@
+{
+  "name": "senk0n.dev",
+  "version": "1.0.0",
+  "description": "**[Moon](https://taylantatli.github.io/Moon)** is a minimal, one column jekyll theme.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Senk0n/senk0n.github.io.git"
+  },
+  "author": "senk0n",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Senk0n/senk0n.github.io/issues"
+  },
+  "homepage": "https://github.com/Senk0n/senk0n.github.io#readme"
+  "devDependencies": { "surge": "latest", "git-scripts": "0.2.1" }
+  "git": { "scripts": { "pre-push": "surge --project ./ --domain senk0n.dev" } }
+}
