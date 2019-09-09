@@ -22,16 +22,6 @@
 		<link rel="shortcut icon" href="favicon.ico">
 	</head>
 	<body>
-		<nav id="dl-menu" class="dl-menuwrapper" role="navigation">
-			<ul class="dl-menu">
-				<h2>SenkOn</h2>
-				<li> <a href="mailto:me@senk0n.dev" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-envelope-square"></i> Email</a> </li>
-				<li> <a href="http://steamcommunity.com/id/senk0n" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-steam-square"></i> Steam</a> </li>
-				<li> <a href="tg://resolve?domain=senk0n"><i class="fa fa-fw fa-telegram-o"></i> Telegram</a> </li>
-				<li> <a href="https://vk.com/senk0n" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-vk-o"></i> Vk</a> </li>
-				<li> <a href="https://instagram.com/senk0n" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-instagram-o"></i> Instagram</a> </li>
-			</ul>
-		</nav>
 		<!-- Header --> 
 		<header class="header flex" role="banner">
 			<div id="particles-js" style="overflow:hidden;">
@@ -48,23 +38,37 @@
 					<h3 class="title"><p style="font-size:1rem;font-weight:300">Зовут Сергей, помешанный из Украины.</p></h3>
 					<hr class="hr-line">
 					<h3 class="title" style="font-size:30px;"> 
-						<a class="social-btn" href="mailto:me@senk0n.dev" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-envelope-square"></i></a> 
-						<a class="social-btn" href="http://steamcommunity.com/id/senk0n" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-steam-square"></i></a> 
+						<a class="social-btn" href="mailto:me@senk0n.dev" target="_blank"><i class="fa fa-fw fa-envelope-square"></i></a> 
+						<a class="social-btn" href="http://steamcommunity.com/id/senk0n" target="_blank"><i class="fa fa-fw fa-steam-square"></i></a> 
 						<a class="social-btn" href="tg://resolve?domain=senk0n"><i class="fa fa-fw fa-telegram"></i></a> 
-						<a class="social-btn" href="https://vk.com/senk0n" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-vk"></i></a> 
-						<a class="social-btn" href="https://instagram.com/senk0n" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-instagram"></i></a> 
+						<a class="social-btn" href="https://vk.com/senk0n" target="_blank"><i class="fa fa-fw fa-vk"></i></a> 
+						<a class="social-btn" href="https://instagram.com/senk0n" target="_blank"><i class="fa fa-fw fa-instagram"></i></a> 
 					</h3>
 					<hr class="hr-line">
 					<h3 class="title"> 
-						<a class="btn zoombtn" href="tg://resolve?domain=s0blog">Blog</a> 
-						<a class="btn zoombtn" href="https://liqpay.ua/checkout/senk0n" target="_blank" rel="noopener noreferrer">Donate</a> 
-						<a class="btn zoombtn" href="tg://resolve?domain=s0lab">Lab</a> 
+						<a class="btn" href="tg://resolve?domain=s0blog">Blog</a> 
+						<a class="btn" id="donate-btn">Donate</a> 
+						<a class="btn" href="tg://resolve?domain=s0lab">Lab</a> 
 					</h3>
-				</div>
-			</div>
+					<!-- Donate block -->
+					<div class="spoiler" style="display: none;" id="donate">
+						<h3 class="title"><p style="font-size:1rem;font-weight:300">Я буду крайне благодарен за любую сумму отправленную одним из сервисов ниже. Огромное тебе спасибо ♡</p></h3>
+						<hr class="hr-line">
+						<h3 class="title"> 
+							<a class="btn" href="https://qiwi.com/n/senk0n" target="_blank" rel="noopener noreferrer">QIWI</a> 
+							<a class="btn" href="https://liqpay.ua/checkout/senk0n" target="_blank" rel="noopener noreferrer">LiqPay (card)</a> 
+						</h3>
+					</div>
+				</div>	
 		</header>
 		<!-- JS  -->
-		<script src="assets/js/jquery-1.12.0.min.js"></script> 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
 		<script src="assets/js/scripts.js"></script> 
+		<script>
+            $( "#donate-btn" ).click(function() {
+                $( ".spoiler" ).not( "#donate" ).slideUp( 500 );
+                $( "#donate" ).slideToggle( 500 );
+            });
+        </script>
 	</body>
 </html>

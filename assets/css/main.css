@@ -686,6 +686,7 @@ dt {
 }
 
 .btn {
+	cursor: pointer;
 	padding: 10px 18px;
 	font-size: 14px;
 	font-size: .875rem;
