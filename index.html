@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>SenkOn's webpage UwU</title>
+		<title>SenkOn's webpage</title>
 		<meta name="description" content="It's my little webpage. Here are some social links and info about my person">
 		<!-- Handheld --> 
 		<meta name="HandheldFriendly" content="True">
@@ -14,8 +14,8 @@
 		<link rel="stylesheet" href="assets/css/main.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand&display=swap">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
-		<!-- JS  -->
-		<script src="assets/js/particles.min.js"></script> 
+		<!-- ParticlesJS  -->
+		<script src="assets/js/particles.min.js"></script>
 		<!-- Favicons -->
 		<link rel="shortcut icon" type="image/png" href="favicon.png">
 		<link rel="shortcut icon" href="favicon.ico">
@@ -23,23 +23,26 @@
 	<body>
 		<!-- Header --> 
 		<header class="header flex" role="banner">
+			<!-- Particles -->
 			<div id="particles-js"></div>
+			<!-- Main container -->
 			<div class="container animated fadeIn">
-				<div class="row">
+				<div class="row box" style="display: block;" id="main">
 					<a href="https://senk0n.dev/"> <img src="https://telega.one/i/userpic/320/senk0n.jpg" class="img-circle zoombtn"> </a> 
 					<h3 class="title">
-						<p style="font-size:1.8rem;font-weight:400">SenkOn</p>
-						<p style="font-size:1rem;font-weight:300">dreams about Android-developer ┐(￣～￣)┌</p>
+						<p style="font-size:1.75rem;font-weight:300" id="bottombox-btn">SenkOn</p>
 					</h3>
+					<p style="font-size:1rem;font-weight:300">dreams about Android-developer ┐(￣～￣)┌</p>
 					<hr class="hr-line">
 					<h3 class="title"><p style="font-size:1rem;font-weight:300">Зовут Сергей, помешанный из Украины.</p></h3>
 					<hr class="hr-line">
 					<h3 class="title" style="font-size:30px;"> 
-						<a class="social-btn" href="mailto:me@senk0n.dev" target="_blank"><i class="fa fa-fw fa-envelope-square"></i></a> 
-						<a class="social-btn" href="http://steamcommunity.com/id/senk0n" target="_blank"><i class="fa fa-fw fa-steam-square"></i></a> 
+						<a class="social-btn" href="mailto:me@senk0n.dev" target="_blank"><i class="fa fa-fw fa-envelope-square"></i></a>
 						<a class="social-btn" href="tg://resolve?domain=senk0n"><i class="fa fa-fw fa-telegram"></i></a> 
-						<a class="social-btn" href="https://vk.com/senk0n" target="_blank"><i class="fa fa-fw fa-vk"></i></a> 
-						<a class="social-btn" href="https://instagram.com/senk0n" target="_blank"><i class="fa fa-fw fa-instagram"></i></a> 
+						<a class="social-btn" href="https://vk.com/senk0n" target="_blank"><i class="fa fa-fw fa-vk"></i></a>
+						<a class="social-btn" href="https://instagram.com/senk0n" target="_blank"><i class="fa fa-fw fa-instagram"></i></a>
+						<a class="social-btn" href="http://steamcommunity.com/id/senk0n" target="_blank"><i class="fa fa-fw fa-steam-square"></i></a>
+						<!--<a class="social-btn" href="https://github.com/Senk0n" target="_blank"><i class="fa fa-fw fa-github"></i></a>-->
 					</h3>
 					<hr class="hr-line">
 					<h3 class="title"> 
@@ -52,19 +55,36 @@
 						<h3 class="title"><p style="font-size:1rem;font-weight:300">Я буду крайне благодарен за любую сумму отправленную одним из сервисов ниже. Огромное тебе спасибо ♡</p></h3>
 						<hr class="hr-line">
 						<h3 class="title"> 
+							<a class="btn" href="https://liqpay.ua/checkout/senk0n" target="_blank">LiqPay (card)</a>
 							<a class="btn" href="https://qiwi.com/n/senk0n" target="_blank">QIWI</a> 
-							<a class="btn" href="https://liqpay.ua/checkout/senk0n" target="_blank">LiqPay (card)</a> 
+							<a class="btn" href="https://donatepay.ru/don/senk0n" target="_blank">DonatePay</a> 
 						</h3>
 					</div>
-				</div>	
+				</div>
+				<div class="box box-bottom" style="display: none;" id="bottom">
+				  <div class="box-mainbtn">
+				    <a class="btn" id="mainbox-btn">SenkOn</a>
+				  </div>
+				</div>
+			</div>
 		</header>
 		<!-- JS  -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
 		<script src="assets/js/scripts.js"></script> 
 		<script>
             $( "#donate-btn" ).click(function() {
-                $( ".spoiler" ).not( "#donate" ).slideUp( 500 );
-                $( "#donate" ).slideToggle( 500 );
+                $( ".spoiler" ).not( "#donate" ).slideUp( 450 );
+                $( "#donate" ).slideToggle( 450 );
+            });
+
+            $( "#mainbox-btn" ).click(function() {
+                $( ".box" ).not( "#main" ).fadeOut( 450 );
+                $( "#main" ).fadeToggle( 450 );
+            });
+
+            $( "#bottombox-btn" ).click(function() {
+                $( ".box" ).not( "#bottom" ).fadeOut( 450 );
+                $( "#bottom" ).fadeToggle( 450 );
             });
         </script>
 	</body>

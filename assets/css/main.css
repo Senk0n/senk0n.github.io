@@ -317,7 +317,7 @@ body {
 
 .container {
 	width: 36rem;
-	max-width: 550px;
+	max-width: 555px;
 	padding-right: 15px;
 	padding-left: 15px;
 	display: block;
@@ -326,7 +326,7 @@ body {
 	background-color: #fff;
 	color: #282828;
 	z-index: 1;
-	border-radius: 3px;
+	border-radius: 7px;
 	box-shadow: 0 0 10px 0 rgba(40, 40, 40, 0.3);
 	-webkit-transition: .5s;
 	-moz-transition: .5s;
@@ -505,6 +505,20 @@ header .entry-meta {
 	-moz-font-smoothing: antialiased !important;
 	text-rendering: optimizelegibility !important;
 	text-align: justify
+}
+
+.box-bottom {
+	font-family: acumin-pro, sans-serif;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding-right: 3px;
+	margin-bottom: 5px;
+	margin-right: 5px
+}
+
+.box-bottom .box-mainbtn {
+	cursor: pointer
 }
 
 @media only screen and (max-width: 30em) {
