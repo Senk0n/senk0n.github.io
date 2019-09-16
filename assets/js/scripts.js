@@ -19,10 +19,10 @@ $(function() {
 particlesJS('particles-js', {
   "particles": {
     "number": {
-      "value": 160,
+      "value": 130,
       "density": {
         "enable": true,
-        "value_area": 850
+        "value_area": 800
       }
     },
     "color": {
